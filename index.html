@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page WooCommerce</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, #007bff, #00c6ff);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 5px solid #0056b3;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        .btn {
+            background: white;
+            color: #007bff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .btn:hover {
+            background: #007bff;
+            color: white;
+            border: 2px solid white;
+        }
+
+        section {
+            padding: 40px 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        .category {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .category a {
+            margin: 5px 10px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .category a:hover {
+            border-color: #007bff;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .product-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .price {
+            display: block;
+            margin: 5px 0;
+            font-size: 1.3em;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #007bff;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            z-index: 1000;
+            opacity: 0.9;
+            transition: opacity 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Selamat Datang di Toko Kami</h1>
+            <p>Temukan produk terbaik untuk Anda dengan harga terbaik!</p>
+            <a href="cart.html" class="btn">Lihat Keranjang</a>
+        </div>
+    </header>
+
+    <section id="categories">
+        <div class="container">
+            <h2>Kategori Produk</h2>
+            <div class="category">
+                <a href="#">Elektronik</a>
+                <a href="#">Pakaian</a>
+                <a href="#">Kecantikan</a>
+                <a href="#">Peralatan Rumah Tangga</a>
+                <a href="#">Olahraga</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <h2>Produk Terbaru</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/150" alt="Produk 1">
+                    <h3>Produk 1</h3>
+                    <p>Deskripsi singkat produk 1.</p>
+                    <span class="price">Rp 100.000</span>
+                    <a href="#" class="btn" data-name="Produk 1" data-price="100000">Beli Sekarang</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/150" alt="Produk 2">
+                    <h3>Produk 2</h3>
+                    <p>Deskripsi singkat produk 2.</p>
+                    <span class="price">Rp 200.000</span>
+                    <a href="#" class="btn" data-name="Produk 2" data-price="200000">Beli Sekarang</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/150" alt="Produk 3">
+                    <h3>Produk 3</h3>
+                    <p>Deskripsi singkat produk 3.</p>
+                    <span class="price">Rp 300.000</span>
+                    <a href="#" class="btn" data-name="Produk 3" data-price="300000">Beli Sekarang</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/150" alt="Produk 4">
+                    <h3>Produk 4</h3>
+                    <p>Deskripsi singkat produk 4.</p>
+                    <span class="price">Rp 150.000</span>
+                    <a href="#" class="btn" data-name="Produk 4" data-price="150000">Beli Sekarang</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/150" alt="Produk 5">
+                    <h3>Produk 5</h3>
+                    <p>Deskripsi singkat produk 5.</p>
+                    <span class="price">Rp 250.000</span>
+                    <a href="#" class="btn" data-name="Produk 5" data-price="250000">Beli Sekarang</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/150" alt="Produk 6">
+                    <h3>Produk 6</h3>
+                    <p>Deskripsi singkat produk 6.</p>
+                    <span class="price">Rp 350.000</span>
+                    <a href="#" class="btn" data-name="Produk 6" data-price="350000">Beli Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Toko Kami. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="./asset/index.js"></script>
+</body>
+</html>
